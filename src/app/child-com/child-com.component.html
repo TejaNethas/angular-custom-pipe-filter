@@ -1,0 +1,38 @@
+<div class="container">
+    <button class="btn btn-warning m-1" (click)="todolistFun()">To Do List</button>
+    <button class="btn btn-warning m-1" (click)="emitAnother()">get data</button>
+</div>
+<br/>
+<div class="container">
+    {{myName}}, {{anotherEmitMsg}}
+</div>
+<br/>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th> Id</th>
+                <th>Title</th>
+                <th>completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let resData of selectedResponse">
+                <td>
+                    <div>{{resData.userId}}</div>
+                </td>
+                <td>
+                    <div>{{resData.id}}</div>
+                </td>
+                <td>
+                    <div>{{resData.title}}</div>
+                </td>
+                <td>
+                    <div>{{resData.completed}}</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
